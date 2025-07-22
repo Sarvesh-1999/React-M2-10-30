@@ -8,6 +8,8 @@ import CounterInCBC from "./all_topics/02_states/CounterInCBC";
 import PropParent1 from "./all_topics/03_props/PropParent1";
 import PropsDrillingParent from "./all_topics/04_propsDrilling/PropsDrillingParent";
 import CallbackParent from "./all_topics/05_callbacks/CallbackParent";
+import UpliftingParent from "./all_topics/06_stateUplifting/UpliftingParent";
+import Context1 from "./all_topics/07_context/Context1";
 const App = () => {
   return (
     <>
@@ -22,7 +24,9 @@ const App = () => {
       {/* <PropParent1/> */}
 
       {/* <PropsDrillingParent/> */}
-      <CallbackParent/>
+      {/* <CallbackParent/> */}
+      {/* <UpliftingParent/> */}
+      <Context1/>
     </>
   );
 };
