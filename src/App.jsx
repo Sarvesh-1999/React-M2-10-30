@@ -10,6 +10,8 @@ import PropsDrillingParent from "./all_topics/04_propsDrilling/PropsDrillingPare
 import CallbackParent from "./all_topics/05_callbacks/CallbackParent";
 import UpliftingParent from "./all_topics/06_stateUplifting/UpliftingParent";
 import Context1 from "./all_topics/07_context/Context1";
+import ReactCss from "./all_topics/08_reactcss/ReactCss";
+import Card from "./all_topics/08_reactcss/Card";
 const App = () => {
   return (
     <>
@@ -26,7 +28,13 @@ const App = () => {
       {/* <PropsDrillingParent/> */}
       {/* <CallbackParent/> */}
       {/* <UpliftingParent/> */}
-      <Context1/>
+      {/* <Context1/> */}
+
+      {/* <ReactCss/> */}
+
+      <Card/>
+
+
     </>
   );
 };

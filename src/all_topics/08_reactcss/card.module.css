@@ -1,0 +1,25 @@
+#cardContainer {
+  height: 300px;
+  width: 250px;
+  border: 2px solid black;
+  background-color: gainsboro;
+}
+
+.heading {
+  text-align: center;
+  padding: 10px;
+}
+
+#cardWrapper>footer{
+    background-color: black;
+    color: white;
+}
+/* 
+! DO NOT directly target tag by element selector, it might leak css to other nested component
+
+footer{
+    background-color: red;
+    color: black;
+}
+    
+*/
