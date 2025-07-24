@@ -12,6 +12,9 @@ import UpliftingParent from "./all_topics/06_stateUplifting/UpliftingParent";
 import Context1 from "./all_topics/07_context/Context1";
 import ReactCss from "./all_topics/08_reactcss/ReactCss";
 import Card from "./all_topics/08_reactcss/Card";
+import ChildrenProps from "./all_topics/09_childrenProps/ChildrenProps";
+import ParentX from "./all_topics/07_context/ParentX";
+import Context2 from "./all_topics/07_context/Context2";
 const App = () => {
   return (
     <>
@@ -32,9 +35,15 @@ const App = () => {
 
       {/* <ReactCss/> */}
 
-      <Card/>
+      {/* <Card /> */}
 
+      {/* <ChildrenProps/> */}
 
+      <Context2>
+        <ParentX />
+      </Context2>
+
+      
     </>
   );
 };

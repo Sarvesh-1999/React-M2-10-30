@@ -1,12 +1,13 @@
 const Example = () => {
   return (
     <div>
-        <h1>Example</h1>
-        <footer>
-            I am Example Footer
-        </footer>
-    </div>
-  )
-}
+      
+      <section>Example Section</section>
 
-export default Example
+      <p>Para in Example Component</p>
+
+    </div>
+  );
+};
+
+export default Example;
