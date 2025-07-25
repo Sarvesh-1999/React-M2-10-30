@@ -15,6 +15,7 @@ import Card from "./all_topics/08_reactcss/Card";
 import ChildrenProps from "./all_topics/09_childrenProps/ChildrenProps";
 import ParentX from "./all_topics/07_context/ParentX";
 import Context2 from "./all_topics/07_context/Context2";
+import ControlledForms1 from "./all_topics/10_controlledForms/ControlledForms1";
 const App = () => {
   return (
     <>
@@ -39,11 +40,11 @@ const App = () => {
 
       {/* <ChildrenProps/> */}
 
-      <Context2>
+      {/* <Context2>
         <ParentX />
-      </Context2>
+      </Context2> */}
 
-      
+      <ControlledForms1/>
     </>
   );
 };
