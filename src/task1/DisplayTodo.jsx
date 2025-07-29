@@ -1,6 +1,7 @@
 import style from "./DisplayTodo.module.css";
 const DisplayTodo = (props) => {
-  let { allTodos } = props;
+  let { allTodos, handleDelete, handleUpdate } = props;
+
   return (
     <ul className={style.todoList}>
       {allTodos.length === 0 ? (
@@ -10,8 +11,8 @@ const DisplayTodo = (props) => {
           <div key={todo.id} className={style.todoItem}>
             <p>{todo.text}</p>
             <div className={style.todoActions}>
-              <button>Update</button>
-              <button>Delete</button>
+              <button onClick={() => handleUpdate(todo)}>Update</button>
+              <button onClick={() => handleDelete(todo)}>Delete</button>
             </div>
           </div>
         ))

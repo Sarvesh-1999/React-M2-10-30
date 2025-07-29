@@ -17,6 +17,7 @@ import ParentX from "./all_topics/07_context/ParentX";
 import Context2 from "./all_topics/07_context/Context2";
 import ControlledForms1 from "./all_topics/10_controlledForms/ControlledForms1";
 import TodoWrapper from "./task1/TodoWrapper";
+import UncontrolledForms from "./all_topics/11_uncontrolledForms/UncontrolledForms";
 const App = () => {
   return (
     <>
@@ -47,7 +48,9 @@ const App = () => {
 
       {/* <ControlledForms1/> */}
 
-      <TodoWrapper/>
+      {/* <TodoWrapper/> */}
+
+      <UncontrolledForms/>
     </>
   );
 };

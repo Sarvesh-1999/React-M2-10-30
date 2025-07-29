@@ -5,7 +5,7 @@ import style from "./TodoWrapper.module.css";
 
 const TodoWrapper = () => {
   const [todo, setTodo] = useState("");
-  const [allTodos, setAllTodos] = useState([]);//[{},{}]
+  const [allTodos, setAllTodos] = useState([]); //[{},{}]
 
   const handleTodo = (e) => setTodo(e.target.value);
 
@@ -17,11 +17,29 @@ const TodoWrapper = () => {
       id: Date.now(),
       text: todo,
     };
-    console.log(newTodo);//{}
+    console.log(newTodo); //{}
 
     setAllTodos([...allTodos, newTodo]); // storing all todos
 
     setTodo(""); // clearing input field
+  };
+
+  const handleDelete = (todo) => {
+    // {id:3,text:"hello"}
+    
+    console.log("Deleted ----> ", todo);
+    let filteredTodo = allTodos.filter((ele) => {
+      return ele.id !== todo.id;
+    });
+    setAllTodos(filteredTodo);
+  };
+
+  const handleUpdate = (todo) => {
+    let todoToBeUpdate = allTodos.find((ele) => {
+      return ele.id === todo.id;
+    });
+    setTodo(todoToBeUpdate.text);
+    handleDelete(todo);
   };
 
   return (
@@ -32,7 +50,11 @@ const TodoWrapper = () => {
         handleSubmit={HandleSubmit}
       />
 
-      <DisplayTodo allTodos={allTodos} />
+      <DisplayTodo
+        allTodos={allTodos}
+        handleDelete={handleDelete}
+        handleUpdate={handleUpdate}
+      />
     </div>
   );
 };
