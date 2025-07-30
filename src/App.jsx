@@ -18,6 +18,7 @@ import Context2 from "./all_topics/07_context/Context2";
 import ControlledForms1 from "./all_topics/10_controlledForms/ControlledForms1";
 import TodoWrapper from "./task1/TodoWrapper";
 import UncontrolledForms from "./all_topics/11_uncontrolledForms/UncontrolledForms";
+import ControlledForms2 from "./all_topics/10_controlledForms/ControlledForms2";
 const App = () => {
   return (
     <>
@@ -50,7 +51,9 @@ const App = () => {
 
       {/* <TodoWrapper/> */}
 
-      <UncontrolledForms/>
+      {/* <UncontrolledForms/> */}
+
+      <ControlledForms2/>
     </>
   );
 };
