@@ -20,6 +20,8 @@ import TodoWrapper from "./task1/TodoWrapper";
 import UncontrolledForms from "./all_topics/11_uncontrolledForms/UncontrolledForms";
 import ControlledForms2 from "./all_topics/10_controlledForms/ControlledForms2";
 import LifeCycleParent from "./all_topics/12_lifeCycle/LifeCycleParent";
+import FetchAPI from "./all_topics/13_fetch/FetchAPI";
+import FetchCountries from "./all_topics/13_fetch/FetchCountries";
 const App = () => {
   return (
     <>
@@ -56,8 +58,11 @@ const App = () => {
 
       {/* <ControlledForms2/> */}
 
+      {/* <LifeCycleParent/> */}
 
-      <LifeCycleParent/>
+      {/* <FetchAPI/> */}
+
+      <FetchCountries/>
     </>
   );
 };
