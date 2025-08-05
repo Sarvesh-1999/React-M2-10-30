@@ -22,6 +22,7 @@ import ControlledForms2 from "./all_topics/10_controlledForms/ControlledForms2";
 import LifeCycleParent from "./all_topics/12_lifeCycle/LifeCycleParent";
 import FetchAPI from "./all_topics/13_fetch/FetchAPI";
 import FetchCountries from "./all_topics/13_fetch/FetchCountries";
+import FetchTask from "./all_topics/13_fetch/FetchTask";
 const App = () => {
   return (
     <>
@@ -62,7 +63,9 @@ const App = () => {
 
       {/* <FetchAPI/> */}
 
-      <FetchCountries/>
+      {/* <FetchCountries/> */}
+
+      <FetchTask/>
     </>
   );
 };
