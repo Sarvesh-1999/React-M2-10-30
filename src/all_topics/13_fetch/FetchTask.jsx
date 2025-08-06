@@ -9,10 +9,18 @@ const FetchTask = () => {
 
   //! to store api data
   const [allCountries, setAllCountries] = useState([]);
+  const [allStates , setAllStates] = useState([])
+  const [allCities , setAllCities] = useState([])
 
   //! to enable/disable select tags
   const [isStateDisable, setIsStateDisable] = useState(true);
   const [isCityDisable, setIsCityDisable] = useState(true);
+
+  const [userData , setUserData] = useState({
+    country:"",
+    state:"",
+    city:""
+  })
 
   //!   to get all countries
   useEffect(() => {
@@ -34,10 +42,37 @@ const FetchTask = () => {
     async function getAllStates(){
         let resp = await fetch(`https://crio-location-selector.onrender.com/country=${selectedCountry}/states`)
         let stateData = await resp.json()
-        console.log(stateData);
+        setAllStates(stateData) //! storing states data to allStates
     }
     getAllStates()
   }, [selectedCountry]);
+
+ //!   to get all cities with respect to selectedCountry and selectedState
+  useEffect(()=>{
+    if(!selectedState) return;
+    setIsCityDisable(false)
+
+    async function getAllCities(){
+      let resp = await fetch(`https://crio-location-selector.onrender.com/country=${selectedCountry}/state=${selectedState}/cities`)
+      let cityData = await resp.json()
+      setAllCities(cityData)
+    }
+
+    getAllCities()      
+
+  },[selectedState])
+
+  useEffect(()=>{
+    if(!selectedCity) return
+
+    setUserData({
+      country : selectedCountry,
+      state : selectedState,
+      city : selectedCity
+    })
+
+  },[selectedCity])
+
 
   return (
     <div className={style.FetchTaskContainer}>
@@ -73,6 +108,10 @@ const FetchTask = () => {
           <option value="" disabled>
             Select State
           </option>
+
+          {allStates.map((state,idx)=>{
+            return <option value={state} key={idx}> {state} </option>
+          })}
         </select>
 
         <select
@@ -85,8 +124,15 @@ const FetchTask = () => {
           <option value="" disabled>
             Select City
           </option>
+
+          {allCities.map((city,idx)=>{
+            return <option value={city} key={idx}>{city}</option>
+          })}
         </select>
       </section>
+
+
+      {!selectedCity ? null : <h1>Country: {userData.country} State: {userData.state} City: {userData.city}</h1>}
     </div>
   );
 };
