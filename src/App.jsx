@@ -24,6 +24,7 @@ import FetchAPI from "./all_topics/13_fetch/FetchAPI";
 import FetchCountries from "./all_topics/13_fetch/FetchCountries";
 import FetchTask from "./all_topics/13_fetch/FetchTask";
 import Flags from "./all_topics/14_customHooks/Flags";
+import SearchFlags from "./all_topics/15_searchFlags/SearchFlags";
 const App = () => {
   return (
     <>
@@ -68,8 +69,9 @@ const App = () => {
 
       {/* <FetchTask /> */}
 
+      {/* <Flags/> */}
 
-      <Flags/>
+      <SearchFlags/>
     </>
   );
 };

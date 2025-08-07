@@ -2,6 +2,7 @@ import { useApi } from "./customHook";
 import FlagCard from "./FlagCard";
 
 const Flags = () => {
+
   let flagData = useApi("https://xcountries-backend.azurewebsites.net/all");
 
   console.log(flagData);
