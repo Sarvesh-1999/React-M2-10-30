@@ -25,6 +25,8 @@ import FetchCountries from "./all_topics/13_fetch/FetchCountries";
 import FetchTask from "./all_topics/13_fetch/FetchTask";
 import Flags from "./all_topics/14_customHooks/Flags";
 import SearchFlags from "./all_topics/15_searchFlags/SearchFlags";
+import Reducer from "./all_topics/16_reducer/Reducer";
+import MemoExample from "./all_topics/17_memo/MemoExample";
 const App = () => {
   return (
     <>
@@ -71,7 +73,11 @@ const App = () => {
 
       {/* <Flags/> */}
 
-      <SearchFlags/>
+      {/* <SearchFlags/> */}
+
+      {/* <Reducer/> */}
+
+      <MemoExample/>
     </>
   );
 };
